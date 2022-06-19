@@ -1,0 +1,495 @@
+
+body{
+    margin: 0;
+    padding: 0;
+    /*background: #588157;*/
+    font-family: 'Jost', sans-serif;
+}
+
+.wrap{
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+}
+
+.content .wrap{
+
+    /*background: #A3B18A;*/
+
+    padding: 40px;
+
+    box-sizing: border-box;
+
+}
+
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+a{
+    text-decoration: none !important;
+    color: #6c757d;
+}
+
+a:hover{
+    color: #f95738;
+}
+
+.mainmenu{
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.main h1{
+    padding-bottom: 20px;
+        font-size: 2rem;
+}
+
+.header{
+    /*background: #495057;*/
+    /*background: #6c757d;*/
+    /*background: radial-gradient(#bb2424 , #1b2730);*/
+    /*background: radial-gradient(#ffffff , #293f50);*/
+            /*margin: 0 auto;*/
+}
+.footer{
+    background: #495057;
+    height: 70px;
+	flex: 0 0 auto;
+}
+
+.dropdown{
+    width: 320px;
+    margin-right: 40px;
+    margin-top: 20px;
+}
+
+.first, .date{
+    padding: 10px 20px;
+    background: #264b26;
+    font-size: 18px;
+    color: #FFC;
+    margin: 0;
+}
+.image{
+    margin-right: 20px;
+    max-width: 50%;
+}
+
+.img-fluid.rounded-start{
+    padding:2px;
+    box-sizing: border-box;
+}
+
+.photo{
+    max-width: 100%;
+}
+
+.text{
+    padding: 20px 20px 0;
+}
+
+.text h2{
+    margin-top: 0;
+}
+
+.text a{
+    padding-left: 0;
+}
+
+.text a:hover{
+    color: #264b26;
+}
+
+.post{
+    font-size: 18px;
+}
+
+label{
+    font-size: 18px;
+}
+
+#id_is_published{
+    width: 20px;
+    height: 20px;
+}
+
+#id_cat{
+    font-size: 20px;
+    padding: 4px;
+}
+
+.last a{
+    display: inline;
+}
+
+.logout{
+    margin-bottom: 40px;
+}
+
+.logout a{
+    font-size: 20px;
+    color: #fff;
+    font-weight: bold;
+}
+
+th {
+    border: 1px solid grey;
+    width: 10%;
+ }
+ td {
+    border: 1px solid grey;
+ }
+ th, td {
+    padding: 10px 15px;
+ }
+
+ .nav-link{
+    display: inline-block;
+    background-color: #c87065;
+ }
+ .nav-item{
+    padding-bottom: 10px;
+ }
+ .nav-pills{
+     padding: 20px;
+     justify-content: end;
+     padding-top: 30px;
+    box-sizing: border-box;
+ }
+
+.logos{
+    display: flex;
+    flex-wrap: wrap;
+    width: 58%;
+    float: left;
+    padding: 20px;
+    padding-left: 0px;
+    justify-content: flex-end;
+}
+
+.logo-a{
+    padding:0;
+    font-weight: bold;
+    font-size: 24px;
+        color: #fff;
+}
+
+.logo-a img{
+    height: 60px;
+
+}
+
+.logo-a a{
+    color: #fff;
+}
+
+.disc{
+    color: #FFF;
+    font-size: 16px;
+}
+.list-group-item-secondary{
+    border: 0.1px solid #e5e4e4;
+}
+.li-act{
+    padding: 5px 0px 5px 15px;
+}
+
+.name{
+    color: #FFF;
+}
+.miniature{
+    flex-direction: row;
+}
+.card.miniature{
+    margin-bottom: 20px;
+}
+
+.btn.price{
+    background-color: #c7a163;
+    width: 150px;
+    color: #FFF;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+        border-radius: 0;
+}
+.list-group-item.li-price-btn{
+    margin-bottom:20px;
+    width: 180px;
+    border-radius: 6px;
+    font-weight: bold;
+        color: #cb6f65;
+
+}
+
+.card-text{
+    color: #6c757d;
+}
+
+.card-text.data{
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 10px;
+}
+.card-text.li-price-btn{
+    border: 1px solid #6c757d;
+    font-weight: bold;
+
+}
+.card-text.li-price{
+    /*color: #e56b6f;*/
+    font-weight: bold;
+}
+
+.view-detail{
+    width: 200px;
+    margin-bottom: 30px;
+    box-sizing: border-box;
+    background-color: #c7a163;
+    border-radius: 0;
+}
+
+.view-detail a{
+    color: #fff;
+}
+
+.pagination a{
+    color: #6c757d;
+}
+
+input[name="photo"]{
+    border: none;
+}
+input[name="images"]{
+    border: none;
+}
+.btn.btn-secondary{
+    width: 250px;
+    margin-top: 20px;
+    background-color: #c7a163;
+    border: none;
+    border-radius: 0;
+}
+
+.card{
+    background-color: #f3f3f1;
+}
+/* увеличение по клику*/
+.imgLink { border: none; background: none; }
+.imgLink img
+{
+  width: 150px;
+}
+.imgLink:active img, .imgLink:focus img
+{
+  width: 350px;
+}
+
+#radiobells_container{
+    float: right;
+   padding-top: 40px;
+    padding-bottom: 30px;
+
+
+}
+#rad_player{
+    border-radius: 4px;
+    border: 1px solid rgba(108, 117, 125, .5);
+    background: #f8f9fa;
+}
+
+#id_text{
+    background: #f8f9fa;
+        border-radius: 6px;
+}
+.col-4.comment{
+    padding: 0;
+}
+.comment-p{
+    font-size: 14px;
+    color: #6c757d;
+}
+.comment-text{
+    color: #6a040f;
+}
+
+.nav-link.reg{
+    background: #fff;
+    margin-right: 20px;
+}
+
+.search-group{
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+    flex-wrap: wrap;
+}
+.form-group{
+    width: 100%;
+}
+
+#readers{
+    margin-bottom: 30px;
+}
+#readers .red {
+    color: #cb6f65;
+
+}
+
+.logo-top {
+  float: left;
+  margin: 0px 0px 5px 30px;
+}
+
+/* Стили гамбургер */
+
+.nav{
+        justify-content: flex-end;
+    align-items: center;
+    padding-top: 30px;
+}
+
+.container{
+   max-width: 98%;
+}
+
+.container.slide.front{
+margin-top: 60px;
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+}
+
+.carousel.slide.container img{
+    max-height: 700px;
+    padding-left: 30px;
+    object-fit: contain;
+}
+
+
+@media screen and (min-width: 300px) and (max-width: 1600px) {
+.flex-back{
+    display: none;
+
+}
+}
+
+@media screen and (min-width: 1600px) {
+.flex-back{
+    display: flex;
+    flex-wrap: wrap;
+        flex-direction: column;
+        }
+}
+.card.text-white{
+    width:330px;
+    border: none;
+    padding-bottom: 20px;
+    background-color: #fff;
+}
+
+.form-control.back{
+        margin-top: 105px;
+        border-radius: 0;
+        background-color: #c7a163;
+        color: #fff;
+}
+
+.card.text-white img{
+    height:215px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.card.product{
+     width: 330px;
+     border:none;
+     border-radius:0;
+     margin-top: 30px;
+}
+
+.card.product img{
+        min-width: 100%;
+    height: 300px;
+    max-height:300px;
+    object-fit: cover;
+    padding-top: 20px;
+    border-radius: 0;
+
+}
+ul.card-product{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+ul.pagination{
+    padding-top: 20px;
+}
+
+.card-img-overlay.slide{
+    top:30%;
+    left: 50%;
+    right:5%;
+}
+
+.card-title.front{
+font=family:  'Alumni Sans', sans-serif;
+    font-size: 48px;
+    font-weight: 900;
+    color: #c87065;
+
+}
+
+input.hover-center-1 {
+    color: #6c757d;
+    border: 1px solid #c87065;
+    background-image: linear-gradient(0, #c87065, #c87065);
+    background-size: 0;
+    transition: .8s;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+}
+
+input.hover-center-1:hover {
+    background-size: 100%;
+    color: #fff;
+}
+
+
+
+.a-title-front{
+    color: #c87065;
+    font-weight: bold;
+}
+
+.form-control.search{
+    width: 760px;
+}
+
+/*.carousel-control-next-icon, .carousel-control-prev-icon{
+    background-color: #a16710;
+}*/
+
+/*    <form action="{% url 'filter' %}" method="get">
+        <div class="flex-back">
+            {%for p in view.get_act %}
+            <button type="text" class="form-control back ml-8" name="act_user" value="{{p.act__act_user}}"></button><br>
+
+            {% endfor %}
+        </div>
+    </form>*/
+
+   /* {% if p.act__act_user == 'Продажа' %}*/
+
+
+   /*<!--<div id="radiobells_container"><a href="https://www.radiobells.com/" rel="nofollow" id="RP_link">Онлайн радио</a> #radiobells_script_hash</div><link href="https://www.radiobells.com/script/style.css" type="text/css" rel="stylesheet" /><script type="text/javascript">var rad_backcolor="#f8f9fa"; var rad_logo = "#fff"; var rad_autoplay = false; var rad_width = "fixed"; var rad_width_px = 300;var rad_stations =[['https://nashe1.hostingradio.ru/nashe-256','Наше радио','nashe'],['https://pub0101.101.ru/stream/air/aac/64/100','Авторадио','avtoradio'],['https://pub0202.101.ru:8443/stream/air/aac/64/99','Радио Energy','nrj'],['https://link.smmbox.ru/http://online.kissfm.ua/KissFM_HD','Kiss FM','kissfm'],['https://rusradio.hostingradio.ru/rusradio96.aacp','Русское радио','russradio'],['https://icecast-vgtrk.cdnvideo.ru/vestifm_mp3_192kbps','Вести FM','vestifm'],['https://listen5.myradio24.com/atmo','Lounge Радио Атмосфера','loungeatmosfera'],['https://cast.radiogroup.com.ua/chillout320','Lounge FM Chill-out','loungechillout'],['https://vocaltrance.fm/radio/deep_320','VocalTrance FM: Deep Vocal House','deepvocalhouse'],['https://maximum.hostingradio.ru/maximum96.aacp','Радио Максимум','maximum'],['https://nashe1.hostingradio.ru:80/ultra-192.mp3','Радио ULTRA','ultra'],['https://rock.amgradio.ru/RusRock','Русский Рок','makradiorusrock'],['https://nashe1.hostingradio.ru/rock-128.mp3','ROCK FM','rockfm'],['https://chanson.hostingradio.ru:8041/chanson256.mp3','Радио Шансон','chanson'],['https://www.liveradio.es/http://online.hitfm.ua/HitFM_HD','Хiт FM','hitfmua'],['https://pub0202.101.ru:8443/stream/air/aac/64/200','Relax FM','relax'],['https://retro.amgradio.ru/Retro','Ретро Хит','retrohit'],['https://link2.rbtrack.ru/http://icecast-radiovanya.cdnvideo.ru/radiovanya','Радио Ваня','vanya'],['https://link.smmbox.ru/http://online.kissfm.ua/KissFM_Deep_HD','Kiss FM: Deep','kissfmdeep'],['https://pub0302.101.ru:8443/stream/air/aac/64/202','Comedy Radio','comediradio'],['https://pub0301.101.ru:8443/stream/pro/aac/64/1','Дискотека 80-х','disco80'],['https://radiorecord.hostingradio.ru/chil96.aacp','Chill-out Radio','chilloutradio']];</script><script type="text/javascript" src="https://www.radiobells.com/script/v2_1.js" charset="UTF-8"></script>-->*/
+/*<p>Категория: {{ p.cat }}</p>*/

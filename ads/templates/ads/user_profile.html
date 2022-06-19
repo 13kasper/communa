@@ -1,0 +1,31 @@
+{% extends 'ads/base.html' %}
+
+{% load static %}
+{% block content %}
+
+
+
+<h1>{{ 'Профиль' }}</h1>
+<a href="{% url 'profile_add' %}"> Добавить данные </a>
+
+{{ page_user.id }}
+{{ users }}
+
+
+
+<div class="card mb-3" style="max-width: 9000px;">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="{{ page_user.ava.url }}" class="img-fluid rounded-start" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title"> Пользователь: {{ page_user.name_author }}  {{ page_user.surname_author }}</h5>
+        <p class="card-text">Участок работы: {{ page_user.place_work }}</p>
+        <p class="card-text">Телефон: {{ page_user }}</p>
+        <p class="card-text">Email: {{ page_user.email }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

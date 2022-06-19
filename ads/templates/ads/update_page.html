@@ -1,0 +1,47 @@
+{% extends 'ads/base.html' %}
+{% load static %}
+{% load bootstrap4 %}
+{% bootstrap_css %}
+{% bootstrap_javascript jquery='full' %}
+
+
+
+{% block content %}
+<h1>{{ title }}</h1>
+
+{% if success %}
+<div class="p-3 mb-2 bg-success text-white">Запись обновлена</div>
+{% endif %}
+
+<form action="" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+
+    <div class="form-error">{{ form.non_field_error }}</div>
+    {{ form.as_p }}
+
+
+    <div class="image_edit">
+    {% for p in images_list %}
+
+                {% if get_product == p.product %}
+                        <img class="image" src="{{ p.images.url }}" alt="" width="150" >
+                        <a href="{% url 'delete_image' p.id %}">Удалить</a>
+                {% endif %}
+    {% endfor %}
+
+    </div>
+
+    <br>
+    <div class="gllery-uploader-wrap">
+        {{ image_form }}
+    </div>
+    <br>
+    <button type="submit" class="btn btn-secondary">Обновить</button>
+
+</form>
+
+
+
+
+
+{% endblock %}

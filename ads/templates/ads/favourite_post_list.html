@@ -1,0 +1,43 @@
+{% extends 'ads/base.html' %}
+
+{% load static %}
+{% block content %}
+<h1>Избранное</h1>
+
+{% if post %}
+<ul>
+    {% for p in post %}
+    <li>
+        <p>Категория: {{ p.cat }}</p>
+    <div class="card mb-3" style="max-width: 695px;">
+      <div class="row g-0">
+        <div class="col-md-4">
+            {% if p.photo %}
+            <img class="img-fluid rounded-start" src="{{ p.photo.url }}" alt="">
+            {% else %}
+            <img src="{% static 'ads/i.webp' %}" alt="" class="img-fluid rounded-start">
+            {% endif %}
+        </div>
+      <div class="col-md-8">
+      <div class="card-body">
+          <h5 class="card-title"><a href="{{ p.get_absolute_url }}">{{ p.title }}</a></h5>
+          <p class="card-text">{{ p.content|striptags|truncatewords:10 }}</p>
+          <p class="card-text li-price">Цена - {{ p.price }}</p>
+
+          <p class="card-text data"><small class="text-muted">Дата: {{ p.time_update|date:"d-m-Y H:i:s" }}</small></p>
+          <button type="button" class="btn view-detail"><a href="{{ p.get_absolute_url }}">Подробнее</a></button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    </li>
+    {% endfor %}
+
+</ul>
+{% else %}
+<h4>В избранное ничего не добавлено</h4>
+{% endif %}
+
+
+{% endblock %}

@@ -1,0 +1,55 @@
+{% extends 'ads/base.html' %}
+{% load static %}
+
+{% block content %}
+<h1>Список</h1>
+
+{% if messages %}
+
+<div class="alert alert-success">
+  {% for m in messages %}
+  {{m}}
+  {% endfor %}
+</div>
+
+{% endif %}
+<table class="table table-striped table-hover">
+  <thead>
+    <tr>
+<!--      <th scope="col">id</th>-->
+      <th scope="col">Название</th>
+      <th scope="col">Дата создания</th>
+      <th scope="col">Редактирование</th>
+      <th scope="col">Удаление</th>
+
+    </tr>
+  </thead>
+  <tbody>
+
+  {% for i in list_product %}
+  {% if i.author == request.user %}
+
+    <tr>
+<!--      <th>{{ i.id}}</th>-->
+      <td>{{ i.title }}</td>
+      <td>{{ i.time_created|date:'d.m.Y' }} - {{ i.author }}</td>
+      <td><a href="{% url 'update_page' i.pk %}">Редактировать</a></td>
+      <td><form action="{% url 'delete_page' i.pk %}" method="post" id="delete_form{{i.id}}">{% csrf_token %}</form>
+      <a href="javascript:void()" onclick="delete_question{{i.id}}()">Удалить</a>
+        <script>
+          function delete_question{{i.id}}() {
+            if (confirm("Вы уверены ?")) {
+                 document.getElementById('delete_form{{i.id}}').submit()
+            }
+          }
+        </script>
+      </td>
+    </tr>
+{% endif %}
+  {% endfor %}
+
+  </tbody>
+</table>
+
+
+{% endblock %}

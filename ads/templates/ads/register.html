@@ -1,0 +1,18 @@
+{% extends 'ads/base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<h1>{{ title }}</h1>
+
+<div class="col-4">
+<form action="" method="post">
+<div class="form-error">{{ form.non_field_error }}</div>
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button  type="submit" class="btn btn-primary mt-2">Регистрация</button>
+</form>
+</div>
+
+{% endblock %}

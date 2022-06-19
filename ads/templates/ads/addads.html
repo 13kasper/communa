@@ -1,0 +1,32 @@
+{% extends 'ads/base.html' %}
+{% load static %}
+
+{% block content %}
+<h1>{{ title }}</h1>
+
+
+
+<form action="{% url 'add_ads' %}" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+
+    <div class="form-error">{{ form.non_field_error }}</div>
+    {{ form.as_p }}
+    {{ image_form }}
+
+    <button type="submit" class="btn btn-secondary">Добавить</button>
+
+</form>
+
+<!--{% endblock %}-->
+<!--{% block js %}-->
+<!--$("form").submit(function() {-->
+<!--  if (window.File && window.FileReader && window.FileList && window.Blob) {-->
+<!--    var file = $('#id_file')[0].files[0];-->
+
+<!--    if (file && file.size > 2 * 1024 * 1024) {-->
+<!--      alert("File " + file.name + " of type " + file.type + " is too big");-->
+<!--      return false;-->
+<!--    }-->
+<!--  }-->
+<!--});-->
+<!--{% endblock %}-->

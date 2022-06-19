@@ -1,0 +1,51 @@
+{% extends 'ads/base.html' %}
+
+{% load static %}
+{% block content %}
+
+<div class="content">
+    <div class="wrap">
+<h1>Результаты поиска</h1>
+
+
+        {% if queryset %}
+<ul>
+    {% for p in queryset %}
+    <li>
+        <p>Категория: {{ p.cat }}</p>
+    <div class="card mb-3" style="max-width: 695px;">
+      <div class="row g-0">
+        <div class="col-md-4">
+            {% if p.photo %}
+            <img class="img-fluid rounded-start" src="{{ p.photo.url }}" alt="">
+            {% else %}
+            <img src="{% static 'ads/i.webp' %}" alt="" class="img-fluid rounded-start">
+            {% endif %}
+        </div>
+      <div class="col-md-8">
+      <div class="card-body">
+          <h5 class="card-title"><a href="{{ p.get_absolute_url }}">{{ p.title }}</a></h5>
+          <p class="card-text">{{ p.content|striptags|truncatewords:10 }}</p>
+          <p class="card-text li-price">Цена - {{ p.price }}</p>
+          <p class="card-text data"><small class="text-muted">Дата: {{ p.time_update|date:"d-m-Y H:i:s" }}</small></p>
+          <button type="button" class="btn view-detail"><a href="{{ p.get_absolute_url }}">Подробнее</a></button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    </li>
+    {% endfor %}
+
+</ul>
+        {% else %}
+        Совпадений не найдено
+        <br><br>
+        <a href="{% url 'index' %}"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-caret-left" viewBox="0 0 16 16">
+  <path d="M10 12.796V3.204L4.519 8 10 12.796zm-.659.753-5.48-4.796a1 1 0 0 1 0-1.506l5.48-4.796A1 1 0 0 1 11 3.204v9.592a1 1 0 0 1-1.659.753z"/>
+</svg>   Вернуться</a>
+        {% endif %}
+    </div>
+</div>
+
+{% endblock %}
